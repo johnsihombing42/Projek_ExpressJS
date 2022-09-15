@@ -1,0 +1,21 @@
+html
+    head
+        title Data-Data Corona
+    body
+        a(href="http://localhost:3000/datacorona/create") Tambah
+        table
+            tr
+                td No
+                td Hari
+                td Jumlah Positif
+                td Jumlah Meninggal
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.hari}
+                    td #{row.jumlah_positif}
+                    td #{row.jumlah_meninggal}
+                    td
+                        form(action=`/datacorona/${row.id_data_corona}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                            a(href=`/datacorona/${row.id_data_corona}/edit`) Ubah

@@ -1,5 +1,5 @@
 {
-  "name": "express-mysql-crud",
+  "name": "express-mysql-crud-data-corona",
   "version": "1.0.0",
   "description": "simple implementation of express and mysql",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "m. nindra zaka",
+  "author": "John Sihombing",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^5.0.1",

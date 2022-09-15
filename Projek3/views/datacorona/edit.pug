@@ -1,0 +1,17 @@
+html
+    head
+        title Ubah Data Covid 
+            
+    body
+
+        form(action=`/datacorona/${data.id_data_corona}?_method=PUT` method="post")
+            label Hari
+                input(type="text" name="hari" value=data.hari)
+                br
+            label Jumlah Positif
+                input(type="text" name="jumlah_positif" value=data.jumlah_positif)
+                br
+            label Jumlah Meninggal
+                input(type="text" name="jumlah_meninggal" value=data.jumlah_meninggal)
+                br
+            input(type="submit" value="simpan")
