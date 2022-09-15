@@ -21,8 +21,7 @@
         <div class="jumbotron">
           <h1>Aplikasi Biodata</h1>
         </div>
-    
-      <a href="biodata/create" class="btn btn-primary btn-lg active" role="button" >Tambah Data</a>
+
 
       <br>
       <br>
@@ -43,8 +42,13 @@
                 <td>
                        <a href="biodata/create"><button  type="submit" class="btn btn-primary">Tambah Data</button></a> 
                        <a href="biodata/<%= data[i].id_biodata %> /edit"><button  type="submit" class="btn btn-warning">Edit Data</button></a> 
-                       <a href="biodata/delete"><button  type="submit" class="btn btn-danger">Hapus Data</button></a> 
-                      
+                       <!-- <a href ac="biodata/<%= data[i].id_biodata %> _method=delete" method="post"><button  type="submit" class="btn btn-danger">Hapus Data</button></a>  -->
+                       <form action="/biodata/<%=data[i].id_biodata%>?_method=delete" method="post">
+                        <button  type="submit" class="btn btn-danger">Hapus Data</button></a>  
+                    </form>
+                      <!-- <form action="/biodata/<%=data[i].id_biodata%>?_method=delete" method="post">
+                        <button  type="submit" class="btn btn-danger">Hapus Data</button></a> 
+                      </form> -->
                       
                 </td>
             </tr>
