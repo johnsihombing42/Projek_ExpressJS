@@ -1,0 +1,40 @@
+<head>
+  <%- include('../partials/head') %>
+</head>
+<header><%- include('../partials/header') %></header>
+
+<main>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Biodata</h1>
+            <h5>Silahkan Edit Data Anda</h5>
+          </div>
+          <form action="/biodata/<%=data.id_biodata%>?_method=PUT" method="post">
+            <div class="modal-body">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="nama"
+                  class="form-control"
+                  placeholder="Nama"
+                  value="<%=data.nama%>"
+                />
+                <div class="form-group">
+                    <input
+                      type="text"
+                      name="alamat"
+                      class="form-control"
+                      placeholder="Alamat"
+                      value="<%=data.alamat%>"
+                    />
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">Edit Data</button>
+              </div>
+            </div>
+          </form>
+    </div>
+ 
+</main>
+
+<footer><%- include('../partials/footer') %></footer>
