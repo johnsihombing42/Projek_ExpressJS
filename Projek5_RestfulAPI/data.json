@@ -1,0 +1,27 @@
+{
+  "users": [
+    { "id": 2, "name": "Joko 123", "email": "joko@gmail.com" },
+    { "id": 3, "name": "Joko 12345", "email": "joko@gmail.com" },
+    { "id": 4, "name": "John Sihombing", "email": "john@gmail.com" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "teh botol",
+      "description": "teh botol tapi kotak",
+      "price": 3000
+    },
+    {
+      "id": 2,
+      "name": "teh manis",
+      "description": "teh manis memang manis",
+      "price": 5000
+    },
+    {
+      "id": 3,
+      "name": "teh manis manis",
+      "description": "teh manis memang manis",
+      "price": 100000
+    }
+  ]
+}
