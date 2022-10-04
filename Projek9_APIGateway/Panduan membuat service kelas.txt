@@ -1,0 +1,17 @@
+KURSUS SERVICE
+    table mentor (create/read) :
+        - id
+        - nama
+        - pekerjaan
+
+    table kelas (create/read) :
+        - id
+        - nama
+        - deskripsi
+        - mentor_id
+        - level (beginer/intermediate/expert)
+
+    tables kelas_user (create/read) :
+        - id
+        - user_id
+        - kelas_id

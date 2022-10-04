@@ -1,0 +1,7 @@
+USER SERVICE (juga sebagai api-gateway)
+    tabel user (create/read) :
+        - id
+        - nama
+        - email
+        - password
+        - pekerjaan
