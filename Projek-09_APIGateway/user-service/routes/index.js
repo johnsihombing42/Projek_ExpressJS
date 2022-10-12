@@ -18,4 +18,9 @@ router.get(
   controller.getKelasUserById
 );
 
+//regis dan login user service
+router.post("/userauth/register", controller.register);
+router.post("/userauth/login", controller.login);
+router.get("/user/read", controller.readAllData);
+router.get("/user/read/:userId", controller.readDetailUser);
 module.exports = router;
