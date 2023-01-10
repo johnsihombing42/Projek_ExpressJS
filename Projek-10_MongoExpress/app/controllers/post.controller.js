@@ -34,7 +34,20 @@ module.exports = {
   },
 
   findById: async (req, res, next) => {
-    try {
-    } catch {}
+    // try {
+    //   const { _id } = req.params;
+    //   const exist = await Post.findOne({ _id });
+    //   if (!exist)
+    //     return res.status(404).json({
+    //       status: false,
+    //       message: "Data not found",
+    //     });
+    //   return res.status(201).json({
+    //     status: true,
+    //     data: exist,
+    //   });
+    // } catch (err) {
+    //   console.log(err);
+    // }
   },
 };
