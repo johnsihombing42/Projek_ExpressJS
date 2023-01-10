@@ -1,5 +1,5 @@
 {
-  "name": "projek10_mongoexpress",
+  "name": "projek-10_mongoexpress",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.6.5",
-    "nodemon": "^2.0.20"
+    "mongoose": "^6.8.3"
   }
 }

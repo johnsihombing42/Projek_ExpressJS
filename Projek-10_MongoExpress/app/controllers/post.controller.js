@@ -1,84 +1,40 @@
 const db = require("../models");
 const Post = db.posts;
-exports.findALL = (req, res) => {
-  Post.find()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message,
-      });
-    });
-};
-exports.create = (req, res) => {
-  const post = new Post({
-    title: req.body.title,
-    body: req.body.body,
-    publisher: req.body.publisher,
-  });
-  post
-    .save(post)
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message,
-      });
-    });
-};
-exports.findOne = (req, res) => {
-  const id = req.params.id;
 
-  Post.findById(id)
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message,
-      });
-    });
-};
-
-exports.update = (req, res) => {
-  const id = req.params.id;
-
-  Post.findByIdAndUpdate(id, req.body)
-    .then((result) => {
-      if (!result) {
-        res.status(404).send({
-          message: "Post not found",
+module.exports = {
+  findAll: async (req, res, next) => {
+    try {
+      const exist = await Post.find();
+      if (exist)
+        return res.status(201).json({
+          status: true,
+          data: exist,
         });
-      }
-      res.send({
-        message: "Post was updated",
-      });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message,
-      });
-    });
-};
+    } catch (err) {
+      next(err);
+    }
+  },
 
-exports.delete = (req, res) => {
-  const id = req.params.id;
-  Post.findByIdAndRemove(id)
-    .then((result) => {
-      if (!result) {
-        res.status(404).send({
-          message: "Post not found",
-        });
-      }
-      res.send({
-        message: "Post was deleted",
+  create: async (req, res, next) => {
+    try {
+      const { title, body, publisher } = req.body;
+      const data = await Post.create({
+        title,
+        body,
+        publisher,
       });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message,
+      return res.status(201).json({
+        status: true,
+        message: "Success create data",
+        data: data,
       });
-    });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  findById: async (req, res, next) => {
+    try {
+    } catch {}
+  },
 };
